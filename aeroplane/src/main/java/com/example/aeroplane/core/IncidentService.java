@@ -2,6 +2,7 @@ package com.example.aeroplane.core;
 
 
 import com.example.aeroplane.dao.*;
+import com.example.aeroplane.dto.*;
 import com.example.aeroplane.repository.*;
 import org.springframework.beans.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ public class IncidentService {
 
     public String create(final Incident incident) {
         incidentRepository.save(incident);
-        return "User successfully created";
+        return "Incident successfully created";
     }
     public List<Incident> findAll(){
        return incidentRepository.findAll();

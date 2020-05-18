@@ -2,6 +2,7 @@ package com.example.aeroplane.rest;
 
 import com.example.aeroplane.core.*;
 import com.example.aeroplane.dao.*;
+import com.example.aeroplane.dto.*;
 import lombok.*;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
