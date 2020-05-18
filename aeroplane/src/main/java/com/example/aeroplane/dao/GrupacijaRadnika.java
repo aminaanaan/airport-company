@@ -5,7 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@AllArgsConstructor
+@Data
 @Table(name = "grupacija_radnika")
 public class GrupacijaRadnika {
     @javax.persistence.Id

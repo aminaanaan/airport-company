@@ -5,7 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@AllArgsConstructor
+@Data
 @Table(name = "prioritet_incidenta")
 public class PrioritetIncidenta {
     @javax.persistence.Id

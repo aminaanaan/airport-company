@@ -5,7 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@AllArgsConstructor
+@Data
 @Table(name = "vrsta_incidenta")
 public class VrstaIncidenta {
     @javax.persistence.Id
@@ -16,5 +16,5 @@ public class VrstaIncidenta {
     @Column(name="kategorizacija_vrste_incidenta")
     private String kategorizacijaVrsteIncidenta;
     private String opis;
-
+public VrstaIncidenta(){}
 }
