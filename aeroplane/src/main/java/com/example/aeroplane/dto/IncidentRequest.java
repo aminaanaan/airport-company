@@ -5,8 +5,8 @@ import lombok.*;
 import java.time.*;
 @Data
 public class IncidentRequest {
-    private Long categoryId;
-    private Long unitId;
+
+    private Long unitId; //flight id ili device id
     private LocalDate datumNastanka;
     private String typeId;
     private Long priorityId;

@@ -6,6 +6,7 @@ import javax.persistence.*;
 import java.time.*;
 
 @Entity
+@Data
 @AllArgsConstructor
 @Table(name = "uredjaj")
 public class Uredjaj {

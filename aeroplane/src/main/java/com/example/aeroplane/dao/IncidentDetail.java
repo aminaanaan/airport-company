@@ -3,22 +3,21 @@ package com.example.aeroplane.dao;
 import lombok.*;
 
 import javax.persistence.*;
-import java.time.*;
 
 @Entity
 @Data
 @AllArgsConstructor
-@Table(name = "incident")
-public class Incident {
+@Table(name = "incidentDetail")
+public class IncidentDetail {
     @javax.persistence.Id
     @org.springframework.data.annotation.Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name="incident_detail_id")
+    private Long incidentDetailId;
+
     private Long incidentId;
-    @Column(name="datum_nastanka")
-    private LocalDate datumNastanka;
-    private String typeId;
-    private Long priorityId;
-    private String description;
+    private String comment;
     private Long userId;
-    public Incident(){}
+
+    public IncidentDetail(){}
 }

@@ -18,8 +18,28 @@ public class IncidentService {
     @Autowired
     IncidentRepository incidentRepository;
 
-    public String create(final Incident incident) {
-        incidentRepository.save(incident);
+    @Autowired
+    LetEepository letRepository;
+    @Autowired
+DeviceRepository uredjajRepository;
+
+    public String create(final IncidentRequest incidentRequest) {
+        Incident incident=new Incident();
+        BeanUtils.copyProperties(incidentRequest,incident);
+        Incident newIncident=incidentRepository.save(incident);
+
+        Long unitId=incidentRequest.getUnitId();
+        if(unitId!=null){
+            if(letRepository.existsById(unitId)){
+                Let let=letRepository.findById(unitId).get();
+                let.setIncidentId(newIncident.getIncidentId());
+            }
+            else if(letRepository.existsById(unitId)){
+                Uredjaj let=uredjajRepository.findById(unitId).get();
+                let.setIncidentId(newIncident.getIncidentId());
+            }
+        }
+
         return "Incident successfully created";
     }
     public List<Incident> findAll(){
