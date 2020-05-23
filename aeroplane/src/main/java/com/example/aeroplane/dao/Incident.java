@@ -20,5 +20,6 @@ public class Incident {
     private Long priorityId;
     private String description;
     private Long userId;
+    private Boolean resolve;
     public Incident(){}
 }

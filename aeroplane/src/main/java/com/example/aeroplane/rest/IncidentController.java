@@ -19,7 +19,7 @@ public class IncidentController {
     private IncidentService incidentService;
  private DeviceRepository uredjajRepository;
  private LetEepository letRepository;
-
+private IncidentRepository incidentRepository;
  private IncidentDetailRepository incidentDetailRepository;
 
     @PostMapping()
@@ -52,5 +52,11 @@ public class IncidentController {
     IncidentDetail createIncidentDetail(IncidentDetail incidentDetail){
         IncidentDetail incidentDetail1=incidentDetailRepository.save(incidentDetail);
         return incidentDetail1;
+    }
+    @PutMapping("/resolve/{incidentId}")
+            Incident resolve(@PathVariable Long incidentId) {
+         Incident incident=incidentRepository.findById(incidentId).get();
+         incident.setResolve(true);
+        return incident;
     }
 }
