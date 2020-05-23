@@ -47,4 +47,10 @@ public class IncidentController {
     List<IncidentDetail> allDetailsForId(@PathVariable Long incidentId) {
         return incidentDetailRepository.findByIncidentId(incidentId);
     }
+
+    @PostMapping("/create/incident-detail")
+    IncidentDetail createIncidentDetail(IncidentDetail incidentDetail){
+        IncidentDetail incidentDetail1=incidentDetailRepository.save(incidentDetail);
+        return incidentDetail1;
+    }
 }
