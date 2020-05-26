@@ -20,6 +20,33 @@ public class Incident {
     private Long priorityId;
     private String description;
     private Long userId;
-    private Boolean resolve;
+    private int status;
+
     public Incident(){}
+
+    public Long getIncidentId() {
+        return incidentId;
+    }
+
+    public void setIncidentId(Long incidentId) {
+        this.incidentId = incidentId;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(IncidentStatus incidentStatus) {
+        switch (incidentStatus){
+            case UNRESOLVED:
+                this.status = 0;
+                break;
+            case RESOLVED:
+                this.status = 1;
+                break;
+            case ESCALATED:
+                this.status = 2;
+                break;
+        }
+    }
 }

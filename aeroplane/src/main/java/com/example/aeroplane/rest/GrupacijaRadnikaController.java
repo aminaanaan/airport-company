@@ -7,6 +7,7 @@ import lombok.*;
 import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin
 @AllArgsConstructor
 @RestController
 @RequestMapping("/odjel")

@@ -12,9 +12,10 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.*;
 
+@CrossOrigin
 @AllArgsConstructor
 @RestController
-@RequestMapping("/radnik")
+    @RequestMapping("/radnik")
 public class RadnikController {
 
     @Autowired
@@ -22,6 +23,8 @@ public class RadnikController {
     @Autowired
     KorisnikRepository radnikRepository;
     @ApiOperation(value = "Login", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+
+    @CrossOrigin
     @PostMapping("/login")
     String login(@RequestBody KorisnikLoginRequest korisnikLoginRequest) throws Exception {
         requestValidation.validateLogin(korisnikLoginRequest);
@@ -33,5 +36,11 @@ public class RadnikController {
     public String create(@Valid @RequestBody Radnik korisnik) {
          radnikRepository.save(korisnik);
          return "Radnik sacuvan";
+    }
+
+    @CrossOrigin
+    @GetMapping("/username/{username}")
+    public Radnik findByUsername(@PathVariable String username){
+        return radnikRepository.findByUsername(username);
     }
 }

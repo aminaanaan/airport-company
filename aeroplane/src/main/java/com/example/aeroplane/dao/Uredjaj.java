@@ -24,6 +24,12 @@ public class Uredjaj {
 
     private Long dodijeljeniRadnikId;
     private Long grupacijaUredjajaId;
-    
 
+    public Long getIncidentId() {
+        return incidentId;
+    }
+
+    public void setIncidentId(Long incidentId) {
+        this.incidentId = incidentId;
+    }
 }

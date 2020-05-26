@@ -13,5 +13,11 @@ public class IncidentRequest {
     private String description;
     private Long userId;
 
+    public Long getUnitId() {
+        return unitId;
+    }
 
+    public void setUnitId(Long unitId) {
+        this.unitId = unitId;
+    }
 }

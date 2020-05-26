@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.*;
 
+@CrossOrigin
 @AllArgsConstructor
 @RestController
 @RequestMapping("/vrsta_incidenta")

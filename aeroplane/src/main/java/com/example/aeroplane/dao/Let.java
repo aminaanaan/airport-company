@@ -25,4 +25,12 @@ private String modelAviona;
 private Long incidentId;
 
     public Let(){}
+
+    public Long getIncidentId() {
+        return incidentId;
+    }
+
+    public void setIncidentId(Long incidentId) {
+        this.incidentId = incidentId;
+    }
 }
