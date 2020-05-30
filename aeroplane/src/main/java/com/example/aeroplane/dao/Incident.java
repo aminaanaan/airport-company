@@ -20,6 +20,8 @@ public class Incident {
     private Long priorityId;
     private String description;
     private Long userId;
+    private Long flightId;
+    private Long deviceId;
     private int status;
 
     public Incident(){}

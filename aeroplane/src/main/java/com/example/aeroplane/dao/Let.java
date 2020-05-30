@@ -15,16 +15,17 @@ public class Let {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long letId;
 
-    @Column(name="vrijeme_polaska")
-private LocalDateTime vrijemePolaska;
+    @Column(name = "vrijeme_polaska")
+    private LocalDateTime vrijemePolaska;
 
     private String destinacija;
-private Long avioKompanijaID;
+    private Long avioKompanijaID;
 
-private String modelAviona;
-private Long incidentId;
+    private String modelAviona;
+    private Long incidentId;
 
-    public Let(){}
+    public Let() {
+    }
 
     public Long getIncidentId() {
         return incidentId;

@@ -39,9 +39,19 @@ public class IncidentController {
         return uredjajRepository.findAll();
     }
 
+    @GetMapping("/devices/{deviceId]")
+    Uredjaj getDeviceById(@PathVariable Long deviceId) {
+        return uredjajRepository.getOne(deviceId);
+    }
+
     @GetMapping("/all/flights")
     List<Let> allFlights() {
         return letRepository.findAll();
+    }
+
+    @GetMapping("/flights/{letId]")
+    Let getFlightById(@PathVariable Long letId) {
+        return letRepository.getOne(letId);
     }
 
     @ApiOperation("get all incident details for incident id")

@@ -10,6 +10,7 @@ import java.time.*;
 @AllArgsConstructor
 @Table(name = "uredjaj")
 public class Uredjaj {
+
     @javax.persistence.Id
     @org.springframework.data.annotation.Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,6 +25,10 @@ public class Uredjaj {
 
     private Long dodijeljeniRadnikId;
     private Long grupacijaUredjajaId;
+
+    public Uredjaj(){
+
+    }
 
     public Long getIncidentId() {
         return incidentId;

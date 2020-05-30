@@ -14,7 +14,6 @@ public class IncidentDetail {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="incident_detail_id")
     private Long incidentDetailId;
-
     private Long incidentId;
     private String comment;
     private Long userId;
